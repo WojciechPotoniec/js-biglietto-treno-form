@@ -11,14 +11,15 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 let eluserName = document.getElementById('userName');
 let eluserKm = document.getElementById('userKm');
 let elRebate = document.getElementById('rebate');
-let elbutton = document.querySelector('.btn');
+let elgenerate = document.querySelector('.generate');
+let elreset = document.querySelector('.reset');
 let elticket = document.querySelector('.ticket');
 
-// console.log(eluserName, eluserKm, elage, elbutton); (work'ok')
+// console.log(eluserName, eluserKm, elage, elgenerate); (work'ok')
 
 // console.log(elticket); (work'ok')
  
-elbutton.addEventListener('click', function(){
+elgenerate.addEventListener('click', function(){
     let userName = eluserName.value;
     let userKm = eluserKm.value;
     let rebate = elRebate.value;
@@ -39,6 +40,11 @@ elbutton.addEventListener('click', function(){
         document.querySelector('.price').innerHTML = price.toFixed(2) + '€';
 })
 
+elreset.addEventListener('click', function(){
+    elticket.classList.add('d-none');
+    document.getElementById('userName').value = '';
+    document.getElementById('userKm').value = '';
+})
 
 /*
 MILESTONE 1:
