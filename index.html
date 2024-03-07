@@ -18,16 +18,16 @@
         <div class="bg-light rounded-3">
             <div class="d-flex justify-content-around text-center">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nome e Cognome</label>
-                    <input type="text" class="form-control text-center" id="exampleFormControlInput1">
+                    <label for="userName" class="form-label">Nome e Cognome</label>
+                    <input type="text" class="form-control text-center" id="userName">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Km da percorrere</label>
-                    <input type="text" class="form-control text-center" id="exampleFormControlInput1">
+                    <label for="userKm" class="form-label">Km da percorrere</label>
+                    <input type="text" class="form-control text-center" id="userKm">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label ">Fascia d'età</label>
-                    <select class="form-select" id="exampleFormControlInput1">
+                    <label for="age" class="form-label">Fascia d'età</label>
+                    <select class="form-select" id="age">
                         <option selected>Adulto</option>
                         <option value="1">Junior</option>
                         <option value="2">Senior</option>
@@ -39,50 +39,40 @@
                 <button type="button" class="btn btn-secondary mx-2">Annulla</button>
             </div>
         </div>
-        <h2 class="text-light text-uppercase text-center mt-3">
-            Il tuo biglietto
-        </h2>
-        <div class="bg-light p-3">
-            <h3 class="text-uppercase">Dettaglio passeggeri</h3>
-            <div class="d-flex">
-                <div class="bg-secondary p-3 w-25">
-                    <h3 class="text-uppercase text-center">Nome passeggero:</h3>
-                    <h4 class="ms-2">Jon Snow</h4>
+        <div class="ticket"> <!-- da inserire displaynone -->
+            <h2 class="text-light text-uppercase text-center mt-3">
+                Il tuo biglietto
+            </h2>
+            <div class="bg-light p-3">
+                <h3 class="text-uppercase">Dettaglio passeggeri</h3>
+                <div class="d-flex">
+                    <div class="bg-secondary p-3 w-25">
+                        <h3 class="text-uppercase text-center">Nome passeggero:</h3>
+                        <h4 class="ms-2">Jon Snow</h4>
+                    </div>
+                    <div class="w-75">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Offerta</th>
+                                    <th>Carrozza</th>
+                                    <th>Codice CP</th>
+                                    <th>Costo biglietto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Biglietto Standard</th>
+                                    <td>5</td>
+                                    <td>92911</td>
+                                    <td>2.10&euro;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="w-75">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Offerta</th>
-                                <th scope="col">Carrozza</th>
-                                <th scope="col">Codice CP</th>
-                                <th scope="col">Costo biglietto</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Biglietto Standard</th>
-                                <td>5</td>
-                                <td>92911</td>
-                                <td>2.10&euro;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
 
+            </div>
         </div>
     </main>
     <script src="js/script.js" type="text/javascript"></script>
