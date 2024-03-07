@@ -12,17 +12,31 @@ let eluserName = document.getElementById('userName');
 let eluserKm = document.getElementById('userKm');
 let elRebate = document.getElementById('rebate');
 let elbutton = document.querySelector('.btn');
+let elticket = document.querySelector('.ticket');
 
 // console.log(eluserName, eluserKm, elage, elbutton); (work'ok')
 
-let elticket = document.querySelector('.ticket');
 // console.log(elticket); (work'ok')
  
 elbutton.addEventListener('click', function(){
     let userName = eluserName.value;
     let userKm = eluserKm.value;
     let rebate = elRebate.value;
-    // console.log(userName, userKm, rebate); (work'ok')
+    let price = (0.21 * userKm);
+    elticket.classList.remove('d-none');
+    document.querySelector('h4').innerHTML = userName;
+    document.querySelector('.ticketTitle').innerHTML = 'Biglietto ' + rebate;
+
+    if(rebate === 'Junior'){
+        price -= price * 20 / 100;
+        document.querySelector('.price').innerHTML = price.toFixed(2) + '€';
+    }
+    else if(rebate === 'Senior'){
+        price -= price * 40 / 100;
+        document.querySelector('.price').innerHTML = price.toFixed(2) + '€';
+    }
+    else
+        document.querySelector('.price').innerHTML = price.toFixed(2) + '€';
 })
 
 

@@ -28,7 +28,7 @@
                 <div class="mb-3">
                     <label for="rebate" class="form-label">Fascia d'età</label>
                     <select class="form-select" id="rebate">
-                        <option value="Adulto">Adulto</option>
+                        <option value="Standard">Adulto</option>
                         <option value="Junior">Junior</option>
                         <option value="Senior">Senior</option>
                     </select>
@@ -39,7 +39,7 @@
                 <button type="button" class="btn btn-secondary mx-2">Annulla</button>
             </div>
         </div>
-        <div class="ticket"> <!-- da inserire displaynone -->
+        <div class="ticket d-none"> <!-- da inserire displaynone -->
             <h2 class="text-light text-uppercase text-center mt-3">
                 Il tuo biglietto
             </h2>
@@ -62,10 +62,10 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Biglietto Standard</th>
+                                    <td class="ticketTitle">Biglietto Standard</th>
                                     <td>5</td>
                                     <td>92911</td>
-                                    <td>2.10&euro;</td>
+                                    <td class="price">2.10&euro;</td>
                                 </tr>
                             </tbody>
                         </table>
